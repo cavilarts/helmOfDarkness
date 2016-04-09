@@ -22,8 +22,17 @@ app.use(function(req, res, next) {
 // MongoDB connection
 mongoose.connect('mongodb://localhost:27017/hod');
 mongoose.connection.once('open', function() {
+    var rotes;
     //Load the models
     app.models = require('./server/models/index');
+
+    //Load the routes
+    routes = require('./server/routes');
+
+    _.each(routes, function(controller, route) {
+        //console.log(controller);
+        app.use(routes, controller(app, route));
+    });
 
     console.log('listenint on port 3000');
     app.listen(3000);
