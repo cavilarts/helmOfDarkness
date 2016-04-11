@@ -30,10 +30,9 @@ mongoose.connection.once('open', function() {
     routes = require('./server/routes');
 
     _.each(routes, function(controller, route) {
-        //console.log(controller);
         app.use(routes, controller(app, route));
     });
 
-    console.log('listenint on port 3000');
-    app.listen(3000);
+    console.log('Node DB proxy listenint on port 3001');
+    app.listen(3001);
 });
