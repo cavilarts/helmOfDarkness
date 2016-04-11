@@ -1,0 +1,27 @@
+{
+  "name": "components",
+  "homepage": "https://github.com/cavilarts/helmOfDarkness",
+  "description": "FE basecamp",
+  "main": "",
+  "moduleType": [
+    "amd"
+  ],
+  "authors": [
+    "cavilarts"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~4.9.0",
+    "jquery": "~2.2.3",
+    "requirejs": "~2.2.0",
+    "doT": "~1.0.1"
+  }
+}
